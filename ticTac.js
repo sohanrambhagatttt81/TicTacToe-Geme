@@ -31,7 +31,9 @@ let disabledBoxes = () => {
 
 resetBtn.addEventListener("click", () =>{
      turn0 = true;
+     
      for(box of cells){
+        box.style.border = "2px solid transparent";
         box.disabled = false;
         box.innerText = "";
      }
@@ -39,6 +41,11 @@ resetBtn.addEventListener("click", () =>{
 
 newGameBtn.addEventListener("click", () =>{
      turn0 = true;
+     for(box of cells){
+        box.style.border = "2px solid transparent";
+        box.disabled = false;
+        box.innerText = "";
+     }
      newGameBtn.style.display = "none";
      hide.setAttribute("class", "hide");
      for(box of cells){
